@@ -1,9 +1,9 @@
-import axios from "axios";
-
+// import axios from "axios";
+import axios from "https://cdn.jsdelivr.net/npm/axios@1.0.0/dist/axios.min.js";
 // let notes = [];
 let updatingId=null;
 async function  renderElementsToSrn() {
-  const data= (await axios.get("http://localhost:5000/api/v1/players/get-players")).data.data;
+  const data= (await axios.get("https://cricket-api-bsjx.onrender.com/api/v1/players/get-players")).data.data;
    // Clear existing content
    parentNote.innerHTML = '';
   data.forEach(player => {
@@ -25,11 +25,11 @@ document.getElementById('createBtn').addEventListener("click", async (e)=>{
   const body={first_name,last_name,email,phone,role,available:availability};
 
   if(updatingId){
-    const result= await axios.put(`http://localhost:5000/api/v1/players/update-players/${updatingId}`,body)
+    const result= await axios.put(`https://cricket-api-bsjx.onrender.com/api/v1/players/update-players/${updatingId}`,body)
     updatingId=null;
     document.getElementById("createBtn").innerText="Submit";
   }else{
-    const res=await axios.post("http://localhost:5000/api/v1/players/add-players",body);
+    const res=await axios.post("https://cricket-api-bsjx.onrender.com/api/v1/players/add-players",body);
     console.log(res)
   }
 
@@ -87,7 +87,7 @@ function renderData(playerData, objId) {
 async function removeELe(id) {
   // document.getElementById(id).style.display='none';
   document.querySelector(`.note${id}`).remove();
-  let res= await axios.delete(`http://localhost:5000/api/v1/players/delete-player/${id}`)
+  let res= await axios.delete(`https://cricket-api-bsjx.onrender.com/api/v1/players/delete-player/${id}`)
   console.log(res);
 }
 
