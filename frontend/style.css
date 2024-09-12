@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background-color: #9CCC65;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0.8rem 0.6rem; */
+  background-color: #F1F8E9;
+ 
+}
+
+h1, #deleteAllNotes{
+  margin: 0.8rem 0.6rem;
+}
+h1{
+  color: #1B5E20;
+}
+
+#deleteAllNotes{
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  color: #FF5722;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-size:medium;
+}
+
+.note{
+  /* width: 28vw; */
+  border: 2px solid black;
+  margin  : 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 36px;
+  
+}
+
+.noteList{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.5rem;
+}
+
+.note button{
+  background-color: green;
+  color: white;
+  padding: 0.4rem 0.8rem; 
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  margin: 0.5rem 0;
+}
+
+.createNode{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin: 1rem 0.5rem;
+  border: 2px solid black;
+  padding: 2rem;
+  width: 450px;
+  background-color: #F1F8E9;
+  border-radius: 25px;
+}
+
+#createBtn{
+  background-color: #FF5722;
+  color: white;
+  padding: 0.4rem 0.8rem; 
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  margin: 0.5rem 0;
+  width: 40%;
+align-self: center;
+}
+
+
+
+#noteTitle{
+  width: 275px;
+  margin: 0.65rem 0;
+  padding:0.2rem 0.1rem;
+  border: none;
+  border-bottom: 2px solid #1B5E20;
+
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],  
+select {
+  margin-bottom: 4px;
+  padding: 8px; 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  /* font-size: 16px; */
+}
