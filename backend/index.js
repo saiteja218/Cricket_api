@@ -6,6 +6,7 @@ const player = require('./models/playerModel');
 
 
 const app=express(); 
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cors()); // Enable CORS for all routes
 // app.use(cors({
